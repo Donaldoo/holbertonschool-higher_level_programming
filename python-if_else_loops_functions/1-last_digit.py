@@ -9,5 +9,5 @@ if dig > 5:
     print(f"Last digit of {number} is {dig} and is greater than 5")
 elif dig == 0:
     print(f"Last digit of {number} is {dig} and is 0")
-elif dig < 6 and last_digit != 0:
+elif dig < 6 and dig != 0:
     print(f"Last digit of {number} is {dig} and is less than 6 and not 0")
