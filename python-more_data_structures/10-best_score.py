@@ -2,4 +2,4 @@
 def best_score(a_dictionary):
     if not a_dictionary or len(a_dictionary) == 0:
         return None
-    return sorted(a_dictionary, key=lambda score: score[2])[-1]
+    return sorted(a_dictionary.keys(), key=lambda score: a_dictionary[score])[-1]
