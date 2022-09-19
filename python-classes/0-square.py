@@ -3,4 +3,4 @@
 
 
 class Square:
-    ""New class Square"""
+    """New class Square"""
