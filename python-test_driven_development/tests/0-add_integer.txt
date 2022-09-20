@@ -1,8 +1,8 @@
 ``add_integer`` module
-
+======================
 
 Using ``add_integer``, both variables must be int or float, float variables will be converted to int
--
+-------------------
 
 Importing:
 	>>> add_integer = __import__('0-add_integer').add_integer
