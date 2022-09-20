@@ -40,7 +40,7 @@ Wrong argument number:
 Cases where infinity is provided:
 	>>> add_integer(float('inf'))
 	Traceback (most recent call last):
-	OverflowError: cannot convert infinity flaot to integer
+	OverflowError: cannot convert infinity float to integer
 
 Cases with NaN numbers:
 	>>> add_integer(float('NaN'))
