@@ -24,7 +24,7 @@ Add int and string:
 	Traceback (most recent call last):
 	TypeError: b must be an integer
 
-One argument passed:
+One argument passed, second argument is 98 by default:
 	>>> add_integer(1)
 	99
 
@@ -38,7 +38,7 @@ Wrong argument number:
 	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 Cases where infinity is provided:
-	>>> add_integer(float('inf'))
+	>>> add_integer(float('+inf'))
 	Traceback (most recent call last):
 	OverflowError: cannot convert infinity float to integer
 
