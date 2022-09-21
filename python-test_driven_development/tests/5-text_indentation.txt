@@ -23,4 +23,5 @@ Passing no arguments:
 
 Passing a text with a string which is a blank line:
 	>>> text_indentation("""    """)
+	UnboundLocalError: local variable 'flag' referenced before assignment
 	
