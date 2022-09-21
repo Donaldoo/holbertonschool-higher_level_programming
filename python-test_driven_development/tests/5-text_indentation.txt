@@ -23,6 +23,6 @@ Passing no arguments:
 
 Passing a text that contains symbols [".", "?", ":"]:
 	>>> text_indentation("""hello.world""")
-	hello
+	hello.
 	<BLANKLINE>
 	world
