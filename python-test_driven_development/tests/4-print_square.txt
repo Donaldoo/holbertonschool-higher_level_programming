@@ -11,3 +11,18 @@ Passing argument int:
 	>>> print_square(2)
 	##
 	##
+
+Passing argument that is not an int:
+	>>> print_square("one")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Passing arg that is less than 0:
+	>>> print_square(-1)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+Case when argument is missing:
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
