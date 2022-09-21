@@ -1,0 +1,13 @@
+``print_square`` module
+
+
+Using ``print_square``, which gets only one argument size( length of the square)
+-------------------------
+
+Importing:
+	print_square = __import__('4-print_square').print_square
+
+Passing argument int:
+	>>> print_square(2)
+	##
+	##
