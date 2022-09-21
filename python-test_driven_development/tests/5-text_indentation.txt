@@ -7,7 +7,16 @@ Using ``test_indentation``, which contains a text as argument
 Importing:
 	>>> text_indentation = __import__('5-text_indentation').text_indentation
 
+Passing text as argument:
+	>>> text_indentation("""hello""")
+	hello
+
 Passing int as argument:
 	>>> text_indentation(12)
 	Traceback (most recent call last):
 	TypeError: text must be a string
+
+Passing no arguments:
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'	
