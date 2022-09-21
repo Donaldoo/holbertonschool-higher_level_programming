@@ -19,4 +19,4 @@ Passing int as argument:
 Passing no arguments:
 	>>> text_indentation()
 	Traceback (most recent call last):
-	TypeError: text_indentation() missing 1 required positional argument: 'text'	
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
