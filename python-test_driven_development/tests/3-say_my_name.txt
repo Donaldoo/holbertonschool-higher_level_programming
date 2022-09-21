@@ -11,10 +11,6 @@ Two strings as args:
 	>>> say_my_name("John", "Smith")
 	My name is John Smith
 
-One string as arg:
-	>>> say_my_name("John")
-	My name is John
-
 One string and one int as args:
 	>>> say_my_name("John", 24)
 	Traceback (most recent call last):
