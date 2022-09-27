@@ -23,6 +23,18 @@ Print list:
 	Traceback (most recent call last):
 	TypeError: list must be an integer
 
+Print tuple:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("tuple", (4,))
+	Traceback (most recent call last):
+	TypeError: tuple must be an integer
+
+Print set of ints:
+	>>> bg - BaseGeometry()
+	>>> bg.integer_validator("set", {1, 2})
+	Traceback (most recent call last):
+	TypeError: set must be an integer
+
 Print None:
 	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("none", None)
