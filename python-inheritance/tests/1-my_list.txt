@@ -12,7 +12,7 @@ List print:
 	>>> list1.append(1)
 	>>> list1.append(2)
 	>>> list1.print_sorted()
-	[1. 2]
+	[1, 2]
 
 Print empty list:
 	>>> list1 = MyList()
