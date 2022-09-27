@@ -1,0 +1,10 @@
+Module ``1-my_list``
+
+
+Using ``my_list``
+-----------------
+
+Importing:
+	>>> MyList = __import__('1-my_list').MyList
+
+
