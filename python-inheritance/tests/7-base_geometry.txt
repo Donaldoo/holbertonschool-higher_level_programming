@@ -34,3 +34,38 @@ Print boolean:
 	>>> bg.integer_validator("bool", True)
 	Traceback (most recent call last):
 	TypeError: bool must be an integer
+
+Print 0:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("zero", 0)
+	Traceback (most recent call last):
+	ValueError: zero must be greater than 0
+
+Print negative numbers:
+	>>> bg = BaseGeometry()
+   	>>> bg.integer_validator("negative", -1)
+	Traceback (most recent call last):
+	ValueError: negative must be greater than 0
+
+Pass one arg:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator(, 1)
+	Traceback (most recent call last):
+	SyntaxError: invalid syntax
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator(1,)
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Pass no args:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Area test:
+	>>> bg = BaseGeometry()
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
