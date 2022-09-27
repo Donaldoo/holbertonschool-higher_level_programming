@@ -13,7 +13,7 @@ Print int:
 
 Print str:
 	>>> bg = BaseGeometry()
-	>>> bg.integer_validator("str", "hi")
+	>>> bg.integer_validator("string", "hi")
 	Traceback (most recent call last):
 	TypeError: string must be an integer
 
@@ -31,6 +31,6 @@ Print None:
 
 Print boolean:
 	>>> bg = BaseGeometry()
-	>>> bg.integer_validator("boolean", True)
+	>>> bg.integer_validator("bool", True)
 	Traceback (most recent call last):
 	TypeError: bool must be an integer
