@@ -30,7 +30,7 @@ Print tuple:
 	TypeError: tuple must be an integer
 
 Print set of ints:
-	>>> bg - BaseGeometry()
+	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("set", {1, 2})
 	Traceback (most recent call last):
 	TypeError: set must be an integer
