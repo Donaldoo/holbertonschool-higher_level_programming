@@ -7,4 +7,21 @@ Using ``my_list``
 Importing:
 	>>> MyList = __import__('1-my_list').MyList
 
+List print:
+	>>> list1 = MyList()
+	>>> list1.append(1)
+	>>> list1.append(2)
+	>>> list1.print_sorted()
+	[1. 2]
 
+Print empty list:
+	>>> list1 = MyList()
+	>>> list1.print_sorted()
+	[]
+
+Append negative number:
+	>>> list1 = MyList()
+	>>> list1.append(-1)
+	>>> list1.append(-2)
+	>>> list1.print_sorted()
+	[-2, -1]
