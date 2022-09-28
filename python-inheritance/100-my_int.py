@@ -12,7 +12,7 @@ class MyInt(int):
         if super().__eq__(value):
             return False
         return True
- 
+
     def __ne__(self, value):
         if self.__eq__(value):
             return False
