@@ -10,12 +10,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        return self.height
+        return self.width
 
     @size.setter
     def size(self, size):
-        self.__width = size
-        self.__height = size
+        self.width = size
+        self.height = size
 
     def __str__(self):
         """str method"""
