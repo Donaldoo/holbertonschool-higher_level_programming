@@ -66,7 +66,11 @@ class Rectangle(Base):
 
     def display(self):
         """prints rectangle with # character"""
+        for i in range(self.__y):
+            print()
         for row in range(self.__height):
+            for j in range(self.__x):
+                print(" ", end="")
             for col in range(self.__width):
                 print("#", end="")
             print()
