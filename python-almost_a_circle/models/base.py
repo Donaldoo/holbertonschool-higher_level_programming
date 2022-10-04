@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Task 1"""
 import json
+from os import path
 
 
 class Base:
@@ -35,6 +36,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """returns the list of json string repr"""
         if json_string is None:
             return []
         else:
@@ -49,3 +51,17 @@ class Base:
             newInstance = cls(1)
         newInstance.update(**dictionary)
         return newInstance
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        if path.exists(filename):
+            with open(filename, "r") as my_file:
+                objList = []
+                jsonList = Base.from_json_string(my_file.read())
+                for obj in jsonList:
+                    objList.append(cls.create(**obj))
+                return objList
+        else:
+            return []
