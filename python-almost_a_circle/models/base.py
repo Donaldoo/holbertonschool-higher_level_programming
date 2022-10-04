@@ -44,4 +44,5 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attrs set"""
         newInstance = cls(1, 1)
-        return newInstance.update(**dictionary)
+        newInstance.update(**dictionary)
+        return newInstance
