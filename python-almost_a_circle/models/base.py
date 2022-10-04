@@ -65,3 +65,28 @@ class Base:
                 return objList
         else:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """writes csv string repr of ovjs to a file"""
+        filename = cls.__name__ + ".csv"
+        dictList = []
+        with open(filename, "w") as my_file:
+            if list_objs is not None:
+                for obj in list_objs:
+                    dictList.append(obj.to_dictionary())
+            my_file.write(cls.to_json_string(dictList))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """returns lsit of instances"""
+        filename = cls.__name__ + ".csv"
+        if path.exists(filename):
+            with open(filename, "w") as my_file:
+                objList = []
+                csvList = Base.from_json_string(my_file.read())
+                for obj in csvList:
+                    objList.append(cls.create(**obj))
+                return objList
+        else:
+            return []
