@@ -82,7 +82,7 @@ class Base:
         """returns lsit of instances"""
         filename = cls.__name__ + ".csv"
         if path.exists(filename):
-            with open(filename, "w") as my_file:
+            with open(filename, "r") as my_file:
                 objList = []
                 csvList = Base.from_json_string(my_file.read())
                 for obj in csvList:
