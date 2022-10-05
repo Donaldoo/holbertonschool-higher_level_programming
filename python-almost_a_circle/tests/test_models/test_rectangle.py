@@ -7,8 +7,7 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_width_height(self):
         """test rectangle with height and height"""
         rect1 = Rectangle(1, 2)
-        rect2 = Rectangle(2, 1)
-        self.assertEqual(rect1.id, rect2.id - 1)
+        self.assertEqual(1, rect1.id)
 
     def test_rectangle_width_height_x(self):
         """test rectangle with heigh, weight and x"""
