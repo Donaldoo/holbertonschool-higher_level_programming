@@ -10,13 +10,13 @@ class TestRectangle(unittest.TestCase):
         rect2 = Rectangle(2, 1)
         self.assertEqual(rect1.id, rect2.id - 1)
 
-    def test_rectangle_width_height_x(self):
+    def test_rectangle_3_args(self):
         """test rectangle with heigh, weight and x"""
         rect1 = Rectangle(1, 2, 3)
         rect2 = Rectangle(3, 2, 1)
         self.assertEqual(rect1.id, rect2.id - 1)
 
-    def test_rectangle_width_height_x_y(self):
+    def test_rectangle_4_args(self):
         """test rectangle with height, width, x, y"""
         rect1 = Rectangle(1, 2, 3, 4)
         rect2 = Rectangle(2, 3, 4, 5)
@@ -79,5 +79,45 @@ class TestRectangle(unittest.TestCase):
 
     def test_area(self):
         """test rect area"""
-        r1 = Rectangle(1, 2)
-        self.assertEqual(2, r1.area())
+        rect1 = Rectangle(1, 2)
+        self.assertEqual(2, rect1.area())
+
+    def test_update(self):
+        """test update method with 1 arg"""
+        rect1 = Rectangle(1, 2, 3, 4, 5)
+        rect1.update(89)
+        self.assertEqual(89, rect1.id)
+
+    def test_update_2(self):
+        """test update method with 2 args"""
+        rect1 = Rectangle(1, 2, 3, 4, 5)
+        rect1.update(89, 1)
+        self.assertEqual(89, rect1.id)
+        self.assertEqual(1, rect1.width)
+
+    def test_update_3(self):
+        """test update with 3 args"""
+        rect1 = Rectangle(1, 2, 3, 4, 5)
+        rect1.update(89, 1, 2)
+        self.assertEqual(89, rect1.id)
+        self.assertEqual(1, rect1.width)
+        self.assertEqual(2, rect1.height)
+
+    def test_update_4(self):
+        """test update with 4 args"""
+        rect1 = Rectangle(1, 2, 3, 4, 5)
+        rect1.update(89, 1, 2, 3)
+        self.assertEqual(89, rect1.id)
+        self.assertEqual(1, rect1.width)
+        self.assertEqual(2, rect1.height)
+        self.assertEqual(3, rect1.x)
+
+    def test_update_5(self):
+        """test update with 5 args"""
+        rect1 = Rectangle(1, 2, 3, 4, 5)
+        rect1.update(89, 1, 2, 3, 4)
+        self.assertEqual(89, rect1.id)
+        self.assertEqual(1, rect1.width)
+        self.assertEqual(2, rect1.height)
+        self.assertEqual(3, rect1.x)
+        self.assertEqual(4, rect1.y)
