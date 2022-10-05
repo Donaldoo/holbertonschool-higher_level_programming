@@ -34,3 +34,8 @@ class TestBase(unittest.TestCase):
         """test method to json none"""
         json_str = Base.to_json_string(None)
         self.assertEqual(json_str, "[]")
+
+    def test_from_json(self):
+        """test method from json none"""
+        json_list = Base.from_json_string(None)
+        self.assertEqual(json_list, [])
