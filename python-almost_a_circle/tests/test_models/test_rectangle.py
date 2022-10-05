@@ -82,6 +82,11 @@ class TestRectangle(unittest.TestCase):
         rect1 = Rectangle(1, 2)
         self.assertEqual(2, rect1.area())
 
+    def test_str_method(self):
+        """test str overload method"""
+        rect1 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual("[Rectangle] (5) 3/4 - 1/2", rect1.__str__())
+
     def test_update(self):
         """test update method with 1 arg"""
         rect1 = Rectangle(1, 2, 3, 4, 5)
