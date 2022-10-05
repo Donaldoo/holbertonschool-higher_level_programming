@@ -76,3 +76,8 @@ class TestRectangle(unittest.TestCase):
         """test rect with height 0"""
         with self.assertRaises(ValueError):
             rect1 = Rectangle(1, 0)
+
+    def test_area(self):
+        """test rect area"""
+        r1 = Rectangle(1, 2)
+        self.assertEqual(2, r1.area())
