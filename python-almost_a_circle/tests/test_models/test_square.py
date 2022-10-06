@@ -8,17 +8,20 @@ class TestSquare(unittest.TestCase):
     def test_square_one(self):
         """test 1 arg"""
         sq1 = Square(1)
-        self.assertEqual(1, sq1.size)
+        sq2 = Square(2)
+        self.assertEqual(sq1.id, sq2.id - 1)
 
     def test_square_two(self):
         """test 2 args"""
         sq1 = Square(1, 2)
-        self.assertEqual(1, sq1.size)
+        sq2 = Square(2, 3)
+        self.assertEqual(sq1.id, sq2.id - 1)
 
     def test_square_three(self):
         """test 3 args"""
         sq1 = Square(1, 2, 3)
-        self.assertEqual(1, sq1.size)
+        sq2 = Square(1, 3, 4)
+        self.assertEqual(sq1.id, sq2.id - 1)
 
     def test_square_four(self):
         """test 4 args"""
@@ -99,7 +102,7 @@ class TestSquare(unittest.TestCase):
             string = my_file.read()
             self.assertEqual(str, type(string))
 
-    def test_save_to_file_(self):
+    def test_save_to_file_None(self):
         Square.save_to_file(None)
         with open("Square.json", "r") as my_file:
             self.assertEqual("[]", my_file.read())
