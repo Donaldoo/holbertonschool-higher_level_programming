@@ -149,3 +149,18 @@ class TestRectangle(unittest.TestCase):
         dict1 = {'width': 1, 'height': 2, 'x': 0, 'y': 0, 'id': 10}
         rect1 = Rectangle.create(**dict1)
         self.assertEqual(10, rect1.id)
+
+    def test_save_to_file(self):
+        """test save to file method"""
+        rect1 = Rectangle(1, 2, 0, 0, 10)
+        Rectangle.save_to_file([rect1])
+        with open("Rectangle.json", "r") as my_file:
+            string = my_file.read()
+        self.assertEqual(str, type(string))
+
+    def test_load_from_file(self):
+        """test load from file method"""
+        rect1 = Rectangle(1, 2, 0, 0, 10)
+        Rectangle.save_to_file([rect1])
+        rectList = Rectangle.load_from_file()
+        self.assertEqual(str(rect1), str(rectList[0]))
