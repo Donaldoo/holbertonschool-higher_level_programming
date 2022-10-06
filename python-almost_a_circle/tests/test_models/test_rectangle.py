@@ -137,3 +137,15 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(2, rect1.height)
         self.assertEqual(3, rect1.x)
         self.assertEqual(4, rect1.y)
+
+    def test_to_dict(self):
+        """test to dictionary method"""
+        rect1 = Rectangle(1, 2, 0, 0, 0)
+        dict1 = {'width': 1, 'height': 2, 'x': 0, 'y': 0, 'id': 0}
+        self.assertEqual(dict1, rect1.to_dictionary())
+
+    def test_create(self):
+        """test create method"""
+        dict1 = {'width': 1, 'height': 2, 'x': 0, 'y': 0, 'id': 10}
+        rect1 = Rectangle.create(**dict1)
+        self.assertEqual(10, rect1.id)
