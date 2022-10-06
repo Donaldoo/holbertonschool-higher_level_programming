@@ -8,14 +8,12 @@ class TestSquare(unittest.TestCase):
     def test_square_one(self):
         """test 1 arg"""
         sq1 = Square(1)
-        sq2 = Square(2)
-        self.assertEqual(sq1.id, sq2.id - 1)
+        self.assertEqual(1, sq1.size)
 
     def test_square_two(self):
         """test 2 args"""
         sq1 = Square(1, 2)
-        sq2 = Square(2, 3)
-        self.assertEqual(sq1.id, sq2.id - 1)
+        self.assertEqual(1, sq1.size)
 
     def test_square_three(self):
         """test 3 args"""
@@ -96,6 +94,12 @@ class TestSquare(unittest.TestCase):
         dict1 = {'size': 3, 'x': 1, 'y': 2, 'id': 10}
         sq1 = Square.create(**dict1)
 
+    def test_save_to_file(self):
+        Square.save_to_file([Square(1)])
+        with open("Square.json", "r") as my_file:
+            string = my_file.read()
+            self.assertEqual(str, type(string))
+
     def test_save_to_file_none(self):
         Square.save_to_file(None)
         with open("Square.json", "r") as my_file:
@@ -105,14 +109,6 @@ class TestSquare(unittest.TestCase):
         Square.save_to_file([])
         with open("Square.json", "r") as my_file:
             self.assertEqual("[]", my_file.read())
-
-    def test_save_to_file(self):
-        sq1 = Square(3, 1, 2, 10)
-        sq2 = Square(2, 2, 3, 11)
-        Square.save_to_file([sq1, sq2])
-        with open("Square.json", "r") as my_file:
-            string = my_file.read()
-            self.assertEqual(str, type(string))
 
     def test_load_from_file(self):
         sq1 = Square(3, 1, 2, 10)
