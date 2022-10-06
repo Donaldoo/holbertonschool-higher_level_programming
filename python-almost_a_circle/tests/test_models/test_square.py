@@ -96,7 +96,7 @@ class TestSquare(unittest.TestCase):
         dict1 = {'size': 3, 'x': 1, 'y': 2, 'id': 10}
         sq1 = Square.create(**dict1)
 
-    def test_save_to_file_None(self):
+    def test_save_to_file_none(self):
         Square.save_to_file(None)
         with open("Square.json", "r") as my_file:
             self.assertEqual("[]", my_file.read())
