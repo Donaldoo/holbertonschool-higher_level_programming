@@ -98,6 +98,14 @@ class TestRectangle(unittest.TestCase):
         sys.stdout = sys.__stdout__
         self.assertEqual("#\n#\n", capturedOutput.getvalue())
 
+    def test_display_x_y(self):
+        capturedOutput = StringIO()
+        sys.stdout = capturedOutput
+        rect1 = Rectangle(1, 2, 2, 2)
+        rect1.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual("\n\n  #\n  #\n", capturedOutput.getvalue())
+
     def test_update(self):
         """test update method with 1 arg"""
         rect1 = Rectangle(1, 2, 3, 4, 5)
@@ -157,7 +165,7 @@ class TestRectangle(unittest.TestCase):
             string = my_file.read()
         self.assertEqual(str, type(string))
 
-    def test_save_to_file_none(self):
+    def test_save_to_file_None(self):
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as my_file:
             self.assertEqual("[]", my_file.read())
