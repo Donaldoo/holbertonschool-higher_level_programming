@@ -25,8 +25,8 @@ class TestSquare(unittest.TestCase):
 
     def test_square_four(self):
         """test 4 args"""
-        sq1 = Square(1, 2, 3, 4)
-        sq2 = Square(3, 4, 5, 6)
+        sq1 = Square(1, 2, 3, 10)
+        sq2 = Square(3, 4, 5, 11)
         self.assertEqual(sq1.id, sq2.id - 1)
 
     def test_square_str_size(self):
