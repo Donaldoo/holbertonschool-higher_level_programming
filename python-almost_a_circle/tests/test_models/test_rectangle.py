@@ -158,7 +158,7 @@ class TestRectangle(unittest.TestCase):
         rect1 = Rectangle.create(**dict1)
         self.assertEqual(10, rect1.id)
 
-    def test_save_to_file(self):
+    def test_save_t_file(self):
         """test save to file method"""
         Rectangle.save_to_file([Rectangle(1, 2)])
         with open("Rectangle.json", "r") as my_file:
