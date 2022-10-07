@@ -103,7 +103,7 @@ class TestSquare(unittest.TestCase):
         with open("Square.json", "r") as f:
             self.assertEqual('[]', f.read())
 
-    def test_save_to_file_Empty(self):
+    def test_save_to_file_empty(self):
         Square.save_to_file([])
         with open("Square.json", "r", encoding="UTF8") as my_file:
             self.assertEqual("[]", my_file.read())
