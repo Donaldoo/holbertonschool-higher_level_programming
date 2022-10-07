@@ -161,7 +161,7 @@ class TestRectangle(unittest.TestCase):
     def test_save_t_file(self):
         """test save to file method"""
         Rectangle.save_to_file([Rectangle(1, 2)])
-        with open("Rectangle.json", "r", encodin="UTF8") as my_file:
+        with open("Rectangle.json", "r", encoding="UTF8") as my_file:
             string = my_file.read()
         self.assertEqual(str, type(string))
 
