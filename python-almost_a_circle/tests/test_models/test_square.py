@@ -10,18 +10,17 @@ class TestSquare(unittest.TestCase):
         sq1 = Square(1)
         sq2 = Square(2)
         self.assertEqual(sq1.id, sq2.id - 1)
-
+    """
     def test_square_two(self):
-        """test 2 args"""
         sq1 = Square(1, 2)
         sq2 = Square(2, 3)
         self.assertEqual(sq1.id, sq2.id - 1)
 
     def test_square_three(self):
-        """test 3 args"""
         sq1 = Square(1, 2, 3)
         sq2 = Square(1, 3, 4)
         self.assertEqual(sq1.id, sq2.id - 1)
+    """
 
     def test_square_four(self):
         """test 4 args"""
