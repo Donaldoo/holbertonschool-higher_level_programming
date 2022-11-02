@@ -45,7 +45,7 @@ Files | Content
 `5-base_geometry.py` | An empty Python class BaseGeometry
 `6-base_geometry.py` | Public instance method def area(self): that raises an Exception with the message area() is not implemented
 `7-base_geometry.py` | Public instance method def integer_validator(self, name, value): that validates the parameter value
-`8-rectangle.py` | : Python class Rectangle that inherits from BaseGeometry 
+`8-rectangle.py` | Python class Rectangle that inherits from BaseGeometry 
 `9-rectangle.py` |Python class Rectangle that inherits from BaseGeometry (7-base_geometry.py). Builds on 8-rectangle.py
 `10-square.py` | Python class Square that inherits from Rectangle (9-rectangle.py).
 `11-square.py` | Python class Square that inherits from Rectangle (9-rectangle.py). Builds on 10-square.py
