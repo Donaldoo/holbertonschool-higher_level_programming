@@ -1,7 +1,8 @@
 # Python - Classes and Objects
 
-Python is an **object oriented programming language (OOP)**.
+Python is an **object oriented programming language (OOP)**.<br>
 Object-oriented programming is a style of programming characterized by the identification of classes of objects closely linked with the methods (functions) with which they are associated. It also includes ideas of inheritance of attributes and methods.
+<br>
 <br>
 **A Class is like an object constructor, or a "blueprint" for creating objects.**
 
