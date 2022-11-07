@@ -1,2 +1,2 @@
 -- lists all privileges of all users
-SHOW GRANTS user_0d_1 AND user_0d_2;
+SHOW GRANTS FOR user_0d_1 AND user_0d_2;
