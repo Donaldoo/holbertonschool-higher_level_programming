@@ -11,7 +11,7 @@ if __name__ == "__main__":
     engine = create_engine(f"mysql+mysqldb://{argv[1]}:{argv[2]}\
                            @localhost/{argv[3]}")
     with Session(engine) as session:
-        statements = session.query(State).filter(State.name == sys.argv[4]).first()
+        statements = session.query(State).filter(State.name == argv[4]).first()
         if statements:
             print(f"{statements.id}")
         else:
