@@ -12,6 +12,6 @@ if __name__ == "__main__":
                            @localhost/{argv[3]}")
     with Session(engine) as session:
         statements = session.query(State, City).\
-                filter(State.id == City.state_id).order_by(City.id)
+                   filter(State.id == City.state_id).order_by(City.id)
         for state, city in statements:
             print(f"{state.name}: ({city.id}) {city.name}")
