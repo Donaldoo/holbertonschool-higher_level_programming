@@ -13,6 +13,6 @@ if __name__ == "__main__":
     with Session(engine) as session:
         statement = session.query(State).first()
         if statement:
-            print(f"{state.id}: {state.name}")
+            print(f"{statement.id}: {statement.name}")
         else:
             print("Nothing")
