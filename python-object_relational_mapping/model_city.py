@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """contains the class defininition of a city that maps to database"""
 
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
