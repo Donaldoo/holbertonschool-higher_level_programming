@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-let first = process.argv[2];
-let third = process.argv[3];
+const first = process.argv[2];
+const third = process.argv[3];
 console.log(first + ' is ' + third);
