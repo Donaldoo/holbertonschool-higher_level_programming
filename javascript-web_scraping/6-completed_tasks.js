@@ -9,12 +9,13 @@ request(url, (err, response, body) => {
   }
   const results = {};
   const data = JSON.parse(body);
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].completed) {
-      if (!(data[i].userId in results)) {
-        results[data[i].userId] = 0;
+  for (const user in data) {
+    if (data[user].completed) {
+      if (results[data[user].userId] === undefined) {
+        results[data[user].userId] = 1;
+      } else {
+        results[data[user].userId] += 1;
       }
-      results[data[i].userId] += 1;
     }
   }
   console.log(results);
