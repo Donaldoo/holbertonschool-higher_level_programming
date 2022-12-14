@@ -7,8 +7,8 @@ request(url, (err, response, body) => {
   if (err) {
     throw new Error(err);
   }
-  const results = {};
   const data = JSON.parse(body);
+  let results = {};
   for (const user in data) {
     if (data[user].completed) {
       if (results[data[user].userId] === undefined) {
